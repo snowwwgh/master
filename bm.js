@@ -1,5 +1,5 @@
 function override(url){
-    if (url.indexOf("licensing.bitmovin.com/licensing") > -1) return "/licensing/bitmovin";
+    if (url.indexOf("licensing.bitmovin.com/licensing") > -1) return "//cdn.jsdelivr.net/gh/blemacc/master/bitmovin/license.json";
     return url;
 }
 
