@@ -10,5 +10,5 @@
     minimumUpdatePeriod="PT05S"
     suggestedPresentationDelay="PT10S"
     minBufferTime="PT02S">
-    <Location>https://s170.convertio.me/p/biFx5d36y_I1MSRUUf-bvw/63f6f491baf953f9210464397167d052/ppv-coming-soon.m4v</Location>
+    <Location>https://cdn.jsdelivr.net/gh/blemacc/master/feba5e5823fc4c13a/upcoming.m4v</Location>
 </MPD>
