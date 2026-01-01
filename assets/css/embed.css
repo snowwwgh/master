@@ -3,7 +3,7 @@
     top: 10px;
     left: 10px;
     background: linear-gradient(180deg, #00c3e8 0%, #009bb8 100%);
-    color: #061218;
+    color: #ffff;
     padding: 6px 8px;
     border-radius: 6px;
     text-decoration: none;
@@ -66,7 +66,7 @@
 .embed-modal button {
     margin-top: 10px;
     background: linear-gradient(180deg, #00c3e8 0%, #009bb8 100%);
-    color: #061218;
+    color: #ffff;
     border: 1px solid rgba(0, 217, 255, 0.35);
     padding: 8px 15px;
     border-radius: 6px;
@@ -98,3 +98,4 @@
     backdrop-filter: blur(1px);
     z-index: 9999;
 }
+
