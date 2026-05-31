@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	background: #000 !important;
+	overflow: hidden !important;
+	overscroll-behavior: none !important;
+	scrollbar-width: none !important;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none !important;
+	width: 0 !important;
+	height: 0 !important;
+}
+body {
+	display: block !important;
+}
+webview,
+div.youtube-theme,
+[data-shaka-player-container],
+.shaka-video-container {
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	overflow: hidden !important;
+	background: #000 !important;
+}
+video[data-shaka-player],
+video#youtube-theme {
+	display: block !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: contain !important;
+	background: #000 !important;
+}
+.shaka-controls-container {
+	overflow: hidden !important;
+}
+.shaka-spinner .shaka-spinner-path {
+	stroke: #fff !important;
+}
+.shaka-spinner path,
+.shaka-spinner circle {
+	stroke: #fff !important;
+}
