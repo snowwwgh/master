@@ -1,0 +1,285 @@
+@font-face {
+	font-family: Montserrat-SemiBold;
+	src: url(https://cdn.jsdelivr.net/gh/snowwwgh/master/bitmovin/Montserrat-SemiBold.ttf)
+}
+:root {
+	--bmpui-accent: #00d9ff;
+	--bmpui-white: #ffffff;
+	--bmpui-accent-filter: brightness(0) saturate(100%) invert(78%) sepia(74%) saturate(400%) hue-rotate(148deg) brightness(103%) contrast(101%);
+	--bmpui-white-filter: brightness(0) invert(1);
+}
+/* Seekbar / Volume */
+.bmpui-ui-seekbar .bmpui-seekbar .bmpui-seekbar-playbackposition-marker {
+	background-color: #89d2d5a1;
+	border: .1875em solid var(--bmpui-accent);
+}
+.bmpui-ui-volumeslider .bmpui-seekbar .bmpui-seekbar-playbackposition-marker {
+	background-color: var(--bmpui-accent);
+}
+.bmpui-ui-seekbar .bmpui-seekbar .bmpui-seekbar-playbackposition,
+.bmpui-ui-volumeslider .bmpui-seekbar .bmpui-seekbar-playbackposition {
+	background-color: var(--bmpui-accent);
+}
+.bmpui-ui-selectbox {
+	color: var(--bmpui-accent);
+}
+.bmpui-ui-uicontainer {
+	font-family: 'Montserrat-SemiBold';
+	font-size: 10pt;
+}
+.bmpui-ui-watermark {
+	display: none !important;
+}
+/* SETTINGS PANEL — COMPACTO */
+.bmpui-ui-settings-panel {
+	width: min(470px, calc(100% - 20px)) !important;
+	max-width: calc(100% - 20px) !important;
+	background: rgba(20, 28, 31, 0.90) !important;
+	border-radius: 6px !important;
+	overflow: hidden !important;
+}
+/* O height:1.5rem vem do seletor global de botões no CSS do Bitmovin, precisa ser forçado com !important em todos os botões do painel */
+.bmpui-ui-settings-panel .bmpui-ui-settingspanelpageopenbutton,
+.bmpui-ui-settings-panel .bmpui-ui-settingspanelpagebackbutton,
+.bmpui-ui-settings-panel .bmpui-ui-settings-panel-navigation-text-button {
+	height: auto !important;
+	min-height: unset !important;
+	padding-top: 3px !important;
+	padding-bottom: 3px !important;
+}
+/* Linhas principais do menu */
+.bmpui-ui-settings-panel .bmpui-ui-settings-panel-item {
+	min-height: 42px !important;
+	height: 42px !important;
+	line-height: 42px !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+/* Texto das linhas */
+.bmpui-ui-settings-panel .bmpui-ui-settings-panel-item .bmpui-ui-label,
+.bmpui-ui-settings-panel .bmpui-ui-settings-panel-item .bmpui-ui-selectbox,
+.bmpui-ui-settings-panel .bmpui-ui-settingspanelpageopenbutton,
+.bmpui-ui-settings-panel .bmpui-ui-settingspanelpagebackbutton,
+.bmpui-ui-settings-panel .bmpui-ui-settings-panel-navigation-text-button {
+	font-family: 'Montserrat-SemiBold' !important;
+	font-size: 16px !important;
+	line-height: 42px !important;
+}
+/* Itens dentro dos submenus */
+.bmpui-ui-settings-panel .bmpui-ui-listbox .bmpui-ui-listbox-item,
+.bmpui-ui-settings-panel .bmpui-ui-selectbox .bmpui-ui-selectbox-item,
+.bmpui-ui-settings-panel .bmpui-ui-selectbox-option {
+	min-height: 42px !important;
+	height: 42px !important;
+	line-height: 42px !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	font-family: 'Montserrat-SemiBold' !important;
+	font-size: 16px !important;
+}
+/* Container interno de cada linha do menu */
+.bmpui-ui-settings-panel .bmpui-container-wrapper {
+	gap: 0 !important;
+	row-gap: 0 !important;
+}
+/* Cada página do settings panel */
+.bmpui-ui-settings-panel .bmpui-ui-settings-panel-page {
+	padding: 0 !important;
+	gap: 0 !important;
+}
+/* ITEM SELECIONADO EM AZUL */
+.bmpui-ui-settings-panel .bmpui-selected,
+.bmpui-ui-settings-panel .bmpui-selected .bmpui-label,
+.bmpui-ui-settings-panel .bmpui-on,
+.bmpui-ui-settings-panel .bmpui-on .bmpui-label {
+	color: var(--bmpui-accent) !important;
+}
+.bmpui-ui-settings-panel .bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-settings-panel .bmpui-on .bmpui-ui-icon {
+	filter: var(--bmpui-accent-filter) !important;
+}
+/* ÍCONES DO PLAYER — BRANCO NORMAL / AZUL ATIVO */
+/* Estado padrão: ícones brancos */
+.bmpui-ui-controlbar .bmpui-ui-button,
+.bmpui-ui-controlbar .bmpui-ui-button .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-button svg,
+.bmpui-ui-controlbar .bmpui-ui-button path {
+	color: var(--bmpui-white) !important;
+	fill: var(--bmpui-white) !important;
+	stroke: var(--bmpui-white) !important;
+}
+.bmpui-ui-controlbar .bmpui-ui-button .bmpui-ui-icon {
+	filter: var(--bmpui-white-filter) !important;
+}
+/* Settings aberto */
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-on,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-active,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-selected,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-expanded="true"],
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-pressed="true"],
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-pressed="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-on svg,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-on path,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-active svg,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-active path,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-selected svg,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-selected path,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-expanded="true"] svg,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-expanded="true"] path,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-pressed="true"] svg,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-pressed="true"] path {
+	color: var(--bmpui-accent) !important;
+	fill: var(--bmpui-accent) !important;
+	stroke: var(--bmpui-accent) !important;
+}
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-settingstogglebutton[aria-pressed="true"] .bmpui-ui-icon {
+	filter: var(--bmpui-accent-filter) !important;
+}
+/* Fullscreen ativo */
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-on,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-active,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-selected,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-expanded="true"],
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-pressed="true"],
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-pressed="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-on svg,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-on path,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-active svg,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-active path,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-selected svg,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-selected path,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-expanded="true"] svg,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-expanded="true"] path,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-pressed="true"] svg,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-pressed="true"] path {
+	color: var(--bmpui-accent) !important;
+	fill: var(--bmpui-accent) !important;
+	stroke: var(--bmpui-accent) !important;
+}
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-fullscreentogglebutton[aria-pressed="true"] .bmpui-ui-icon {
+	filter: var(--bmpui-accent-filter) !important;
+}
+/* Chromecast ativo */
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton.bmpui-on,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton.bmpui-active,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton.bmpui-selected,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton[aria-expanded="true"],
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton[aria-pressed="true"],
+.bmpui-ui-controlbar .bmpui-ui-castbutton.bmpui-on,
+.bmpui-ui-controlbar .bmpui-ui-castbutton.bmpui-active,
+.bmpui-ui-controlbar .bmpui-ui-castbutton.bmpui-selected,
+.bmpui-ui-controlbar .bmpui-ui-castbutton[aria-expanded="true"],
+.bmpui-ui-controlbar .bmpui-ui-castbutton[aria-pressed="true"],
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton[aria-pressed="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton[aria-pressed="true"] .bmpui-ui-icon {
+	color: var(--bmpui-accent) !important;
+	fill: var(--bmpui-accent) !important;
+	stroke: var(--bmpui-accent) !important;
+}
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-casttogglebutton[aria-pressed="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-castbutton[aria-pressed="true"] .bmpui-ui-icon {
+	filter: var(--bmpui-accent-filter) !important;
+}
+/* PiP ativo */
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton.bmpui-on,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton.bmpui-active,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton.bmpui-selected,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton[aria-expanded="true"],
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton[aria-pressed="true"],
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton.bmpui-on,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton.bmpui-active,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton.bmpui-selected,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton[aria-expanded="true"],
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton[aria-pressed="true"],
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton[aria-pressed="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton[aria-pressed="true"] .bmpui-ui-icon {
+	color: var(--bmpui-accent) !important;
+	fill: var(--bmpui-accent) !important;
+	stroke: var(--bmpui-accent) !important;
+}
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-pictureinpicturetogglebutton[aria-pressed="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton.bmpui-on .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton.bmpui-active .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton.bmpui-selected .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton[aria-expanded="true"] .bmpui-ui-icon,
+.bmpui-ui-controlbar .bmpui-ui-piptogglebutton[aria-pressed="true"] .bmpui-ui-icon {
+	filter: var(--bmpui-accent-filter) !important;
+}
+/* PLAY/PAUSE */
+/* Quando está pausado, o botão mostra PLAY: deixar azul */
+.bmpui-ui-controlbar .bmpui-ui-playbacktogglebutton:not(.bmpui-on):not(.bmpui-active):not(.bmpui-selected):not([aria-pressed="true"]),
+.bmpui-ui-controlbar .bmpui-ui-playbacktogglebutton:not(.bmpui-on):not(.bmpui-active):not(.bmpui-selected):not([aria-pressed="true"]) :is(.bmpui-ui-icon, svg, path) {
+	color: var(--bmpui-accent) !important;
+	fill: var(--bmpui-accent) !important;
+	stroke: var(--bmpui-accent) !important;
+}
+.bmpui-ui-controlbar .bmpui-ui-playbacktogglebutton:not(.bmpui-on):not(.bmpui-active):not(.bmpui-selected):not([aria-pressed="true"]) .bmpui-ui-icon {
+	filter: var(--bmpui-accent-filter) !important;
+}
+/* Quando está reproduzindo, o botão mostra PAUSE: deixar branco */
+.bmpui-ui-controlbar .bmpui-ui-playbacktogglebutton:is(.bmpui-on, .bmpui-active, .bmpui-selected, [aria-pressed="true"]),
+.bmpui-ui-controlbar .bmpui-ui-playbacktogglebutton:is(.bmpui-on, .bmpui-active, .bmpui-selected, [aria-pressed="true"]) :is(.bmpui-ui-icon, svg, path) {
+	color: var(--bmpui-white) !important;
+	fill: var(--bmpui-white) !important;
+	stroke: var(--bmpui-white) !important;
+}
+.bmpui-ui-controlbar .bmpui-ui-playbacktogglebutton:is(.bmpui-on, .bmpui-active, .bmpui-selected, [aria-pressed="true"]) .bmpui-ui-icon {
+	filter: var(--bmpui-white-filter) !important;
+}
+/* PLAY CENTRAL */
+.bmpui-ui-hugeplaybacktogglebutton,
+.bmpui-ui-hugeplaybacktogglebutton :is(.bmpui-ui-icon, .bmpui-ui-image, svg, path),
+.bmpui-ui-hugeplaybacktogglebutton::before,
+.bmpui-ui-hugeplaybacktogglebutton::after {
+	color: var(--bmpui-accent) !important;
+	fill: var(--bmpui-accent) !important;
+	stroke: var(--bmpui-accent) !important;
+	border-color: var(--bmpui-accent) !important;
+}
+.bmpui-ui-hugeplaybacktogglebutton :is(.bmpui-ui-icon, .bmpui-ui-image) {
+	filter: var(--bmpui-accent-filter) !important;
+}
